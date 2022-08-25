@@ -9,12 +9,13 @@ public class Member extends UserWithRoles {
 
     String firstName;
 
-    public Member() {
-
-    }
-
     public Member(String user, String password, String email, String firstName) {
         super(user, password, email);
         this.firstName = firstName;
     }
+
+    public Member() {
+
+    }
+
 }

@@ -1,11 +1,15 @@
 package dat3.cars.entity;
 
+import lombok.Getter;
+import lombok.Setter;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
 
+@Getter
+@Setter
 @Entity
 public class Car {
 
@@ -39,5 +43,18 @@ public class Car {
 
     public Car() {
 
+    }
+
+    @Override
+    public String toString() {
+        return "Car{" +
+                "id=" + id +
+                ", brand='" + brand + '\'' +
+                ", model='" + model + '\'' +
+                ", pricePrDay=" + pricePrDay +
+                ", bestDiscount=" + bestDiscount +
+                ", created=" + created +
+                ", edited=" + edited +
+                '}';
     }
 }

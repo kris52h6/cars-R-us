@@ -28,11 +28,12 @@ public class SetupDevUsers implements ApplicationRunner {
 
     @Override
     public void run(ApplicationArguments args) {
-        Member m1 = new Member("user", passwordUsedByAll, "email@h.dk", "Sørns");
-        memberRepository.save(m1);
+        /* test entities
+        Member m1 = new Member("user", passwordUsedByAll, "email@h.dk", "Sørn", "Matisen", "A gade", "København", 2200, true, 1);
+        memberRepository.save(m1);*/
 
-        Car c1 = new Car("Mercedes", "A1", 200, 500);
-        carRepository.save(c1);
+        /*Car c1 = new Car("Mercedes", "A1", 200, 500);
+        carRepository.save(c1);*/
 
         setupUserWithRoleUsers();
     }

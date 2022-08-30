@@ -20,8 +20,8 @@ class MemberRepositoryTest {
     @BeforeAll
     public static void setupData(@Autowired MemberRepository memberRepository) {
         String passwordUsedByAll = "test12";
-        Member m1 = new Member("user", passwordUsedByAll, "eet", "Sørn", "Matisen", "A gade", "København", 2200, true, 1);
-        Member m2 = new Member("user5", passwordUsedByAll, "email2", "Jørn", "Snisen", "C gade", "København", 2200, true, 2);
+        Member m1 = new Member("user", passwordUsedByAll, "eet", "Sørn", "Matisen", "A gade", "København", "2200");
+        Member m2 = new Member("user5", passwordUsedByAll, "email2", "Jørn", "Snisen", "C gade", "København", "2200");
 
         memberRepository.save(m1);
         memberRepository.save(m2);

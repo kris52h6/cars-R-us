@@ -4,6 +4,7 @@ import dat3.security.entity.UserWithRoles;
 import lombok.Getter;
 import lombok.Setter;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 
 @Getter
@@ -11,11 +12,21 @@ import javax.persistence.Entity;
 @Entity
 public class Member extends UserWithRoles {
 
+    @Column(length = 50)
     private String firstName;
+
+    @Column(length = 50)
     private String lastName;
+
+    @Column(length = 50)
     private String street;
+
+    @Column(length = 50)
     private String city;
-    private int zip;
+
+    @Column(length = 50)
+    private String zip;
+
     private boolean approved;
     private int ranking;
 
@@ -25,15 +36,13 @@ public class Member extends UserWithRoles {
         this.firstName = firstName;
     }*/
 
-    public Member(String user, String password, String email, String firstName, String lastName, String street, String city, int zip, boolean approved, int ranking) {
+    public Member(String user, String password, String email, String firstName, String lastName, String street, String city, String zip) {
         super(user, password, email);
         this.firstName = firstName;
         this.lastName = lastName;
         this.street = street;
         this.city = city;
         this.zip = zip;
-        this.approved = approved;
-        this.ranking = ranking;
     }
 
     public Member() {

@@ -1,6 +1,7 @@
 package dat3.cars.entity;
 
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
@@ -11,6 +12,7 @@ import java.time.LocalDateTime;
 @Getter
 @Setter
 @Entity
+@NoArgsConstructor
 public class Car {
 
     @Id
@@ -39,10 +41,6 @@ public class Car {
         this.model = model;
         this.pricePrDay = pricePrDay;
         this.bestDiscount = bestDiscount;
-    }
-
-    public Car() {
-
     }
 
     @Override

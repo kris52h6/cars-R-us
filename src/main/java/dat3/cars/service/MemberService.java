@@ -5,7 +5,6 @@ import dat3.cars.dto.MemberResponse;
 import dat3.cars.entity.Member;
 import dat3.cars.repository.MemberRepository;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
 
@@ -23,7 +22,7 @@ public class MemberService {
 
     public List<MemberResponse> getMembers() {
         List<Member> members = memberRepository.findAll();
-        return members.stream().map(member -> new MemberResponse(member,true)).collect(Collectors.toList());
+        return members.stream().map(member -> new MemberResponse(member,false)).collect(Collectors.toList());
     }
 
     public MemberResponse addMember(MemberRequest memberRequest){

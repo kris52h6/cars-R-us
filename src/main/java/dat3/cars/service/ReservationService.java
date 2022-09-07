@@ -41,7 +41,7 @@ public class ReservationService {
 
     }
 
-    /*public ReservationResponse getReservationById(int id) {
+    public ReservationResponse getReservationById(int id) {
         Reservation found = reservationRepository.findById(id).orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Reservation not found"));
 
         return new ReservationResponse(found);
@@ -50,7 +50,7 @@ public class ReservationService {
     public List<ReservationResponse> getReservations() {
         List<Reservation> reservations = reservationRepository.findAll();
         return reservations.stream().map(reservation -> new ReservationResponse(reservation)).collect(Collectors.toList());
-    }*/
+    }
 
 
 }

@@ -17,7 +17,7 @@ public class ReservationController {
         this.reservationService = reservationService;
     }
 
-    @GetMapping(path =("/{id}"))
+    /*@GetMapping(path =("/{id}"))
     ReservationResponse getReservationById(@PathVariable int id) {
         return reservationService.getReservationById(id);
     }
@@ -25,7 +25,7 @@ public class ReservationController {
     @GetMapping
     List<ReservationResponse> getReservations() {
         return reservationService.getReservations();
-    }
+    }*/
 
     @PostMapping("/{username}/{carId}/{rentalDate}")
     public void addReservation(@PathVariable String username, @PathVariable int carId, @PathVariable String rentalDate) {

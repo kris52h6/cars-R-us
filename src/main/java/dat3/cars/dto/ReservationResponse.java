@@ -1,9 +1,6 @@
 package dat3.cars.dto;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
-import com.fasterxml.jackson.annotation.JsonInclude;
-import dat3.cars.entity.Car;
-import dat3.cars.entity.Member;
 import dat3.cars.entity.Reservation;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

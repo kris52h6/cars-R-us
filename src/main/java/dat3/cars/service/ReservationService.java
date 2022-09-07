@@ -27,11 +27,6 @@ public class ReservationService {
         this.carRepository = carRepository;
     }
 
-    public ReservationResponse getReservationById(int id) {
-        Reservation found = reservationRepository.findById(id).orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Reservation not found"));
-
-        return new ReservationResponse(found);
-    }
 
     public void reserveCar(String username, int carId, LocalDate date) {
         Member member = memberRepository.findById(username).orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "User not found"));
@@ -46,12 +41,16 @@ public class ReservationService {
 
     }
 
+    /*public ReservationResponse getReservationById(int id) {
+        Reservation found = reservationRepository.findById(id).orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Reservation not found"));
+
+        return new ReservationResponse(found);
+    }
+
     public List<ReservationResponse> getReservations() {
         List<Reservation> reservations = reservationRepository.findAll();
         return reservations.stream().map(reservation -> new ReservationResponse(reservation)).collect(Collectors.toList());
-    }
-
-    /*public List<ReservationResponse> getRe*/
+    }*/
 
 
 }

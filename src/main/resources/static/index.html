@@ -7,5 +7,21 @@
 <body>
    <h2>Backend for the Cars 'R' Us project</h2>
    <h3>By Kristian</h3>
+
+   <!--<button onclick="getMembers()">Show members</button>
+   <ul id="members"></ul>-->
 </body>
+<!--<script>
+    "use strict";
+
+    function getMembers() {
+        fetch('api/members')
+            .then((response) => response.json())
+            .then((data) =>  {
+                const memberList = data.map(m => `<li>${m.username} - ${m.firstName} - ${m.lastName} - ${m.zip} - ${m.city} - ${m.street} </li>`)
+                document.getElementById("members").innerHTML = memberList.join("\n")
+            })
+    }
+
+</script>-->
 </html>

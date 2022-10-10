@@ -10,6 +10,7 @@ import java.time.LocalDateTime;
 @Getter
 @Setter
 public class CarResponse {
+    private int id;
     private String brand;
     private String model;
     private double pricePrDay;
@@ -22,6 +23,7 @@ public class CarResponse {
     LocalDateTime edited;
 
     public CarResponse(Car c, boolean includeAll) {
+        this.id = c.getId();
         this.brand = c.getBrand();
         this.model = c.getModel();
         this.pricePrDay = c.getPricePrDay();

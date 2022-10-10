@@ -22,7 +22,7 @@ public class CarService {
     }
 
     public CarResponse getCarById(int id) {
-        Car found = carRepository.findById(id).orElseThrow(()-> new ResponseStatusException(HttpStatus.NOT_FOUND,"User not found"));
+        Car found = carRepository.findById(id).orElseThrow(()-> new ResponseStatusException(HttpStatus.NOT_FOUND,"Car not found"));
         return new CarResponse(found, true);
     }
 
@@ -39,7 +39,7 @@ public class CarService {
     }
 
     public void editCar(CarRequest c, int id) {
-        Car found = carRepository.findById(id).orElseThrow(()-> new ResponseStatusException(HttpStatus.NOT_FOUND,"User not found"));
+        Car found = carRepository.findById(id).orElseThrow(()-> new ResponseStatusException(HttpStatus.NOT_FOUND,"Car not found"));
         found.setBrand(c.getBrand());
         found.setModel(c.getModel());
         found.setPricePrDay(c.getPricePrDay());

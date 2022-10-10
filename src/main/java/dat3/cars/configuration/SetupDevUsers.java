@@ -39,7 +39,9 @@ public class SetupDevUsers implements ApplicationRunner {
 
 
         Car c1 = new Car("Mercedes", "A1", 200, 500);
+        Car c2 = new Car("BMW", "FAST", 7000, 100);
         carRepository.save(c1);
+        carRepository.save(c2);
 
 
         Reservation r1 = new Reservation(m1, c1, LocalDate.of(2022, 9, 6));
@@ -73,5 +75,7 @@ public class SetupDevUsers implements ApplicationRunner {
         userWithRolesRepository.save(user1);
         userWithRolesRepository.save(user2);
         userWithRolesRepository.save(user3);
+
+
     }
 }

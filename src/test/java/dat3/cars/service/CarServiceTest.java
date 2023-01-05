@@ -50,6 +50,12 @@ class CarServiceTest {
     }
 
     @Test
+    void getCarsFail() {
+        List<Car> response = carRepository.findAll();
+        assertEquals(1, response.size());
+    }
+
+    @Test
     void addCar() {
         Car c = new Car("Skoda", "SLOW", 50, 10);
         CarRequest carToBeAdded = new CarRequest(c);
